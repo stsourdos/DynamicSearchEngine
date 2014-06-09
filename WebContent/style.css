@@ -1,0 +1,275 @@
+@CHARSET "ISO-8859-1";
+html {
+	background-color: white;
+}
+
+body {
+	border-style: outset;
+	margin-top:7px;
+	margin-bottom:7px;
+	width:900px;
+	margin-left: auto;
+	margin-right: auto;
+	border-color: #6699ff;
+	background: linear-gradient(#FFCCCC, #CCFFFF);
+	border-radius: 10px;
+	padding:0px;
+}
+
+/*MAIN MENU*/
+
+/*Reset the default ul styles*/
+#menu, #menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*MAIN: The #menu is the main 'ul' for this menu*/
+#menu {
+	width: 580px;
+    margin-top: 355px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #222;
+    background-color: #111;
+    background-image: linear-gradient(#444, #111);
+    border-radius: 5px;
+    box-shadow: 0 5px 5px #777;
+}
+
+/*CLEAR FLOATS: Nicolas Gallagher's clearing method*/
+#menu:before,
+#menu:after {
+    content: "";
+    display: table;
+}
+
+#menu:after {
+    clear: both;
+}
+
+#menu {
+    zoom:1;
+}
+
+/* LIST ELEMENTS: Select an "a" element that is child of a "li" ; the "li" element must be a descendant of the "#menu"*/
+#menu li {
+    float: left;
+    border-right: 1px solid #222;
+    box-shadow: 1px 0 0 #444;
+    position: relative;
+}
+
+#menu a {
+    float: left;
+    padding: 12px 30px;
+    color: #999;
+    text-transform: uppercase;
+    font: bold 12px Arial, Helvetica;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #000;
+}
+
+#menu li:hover > a {
+    color: #fafafa;
+}
+
+*html #menu li a:hover { /* IE6 only */
+    color: #fafafa;
+}
+
+/*SUBMENUS: CSS3 transitons we can animate changes to CSS properties like margin or opacity*/
+#menu ul {
+    margin: 20px 0 0 0;
+    _margin: 0; /*IE6 only*/
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    z-index: 1;    
+    background: #444;   
+    background: linear-gradient(#444, #111);
+    box-shadow: 0 -1px 0 rgba(255,255,255,.3);  
+    border-radius: 3px;
+    transition: all .2s ease-in-out;
+}
+
+#menu li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    margin: 0;
+}
+
+#menu ul ul {
+    top: 0;
+    left: 150px;
+    margin: 0 0 0 20px;
+    _margin: 0; /*IE6 only*/
+    box-shadow: -1px 0 0 rgba(255,255,255,.3);      
+}
+
+#menu ul li {
+    float: none;
+    display: block;
+    border: 0;
+    _line-height: 0; /*IE6 only*/
+    box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+}
+
+#menu ul li:last-child {   
+    box-shadow: none;    
+}
+
+#menu ul a {    
+    padding: 10px;
+    width: 130px;
+    _height: 10px; /*IE6 only*/
+    display: block;
+    white-space: nowrap;
+    float: none;
+    text-transform: none;
+}
+
+#menu ul a:hover {
+    background-color: #0186ba;
+    background-image: linear-gradient(#04acec, #0186ba);
+}
+
+/*MAIN MENU*/
+
+
+.banner{position:absolute; z-index:1; height:280px; width:813px; top:75px; background:#FFF; border:solid 2px black; margin-left: 40px ; margin-right: auto}
+.banner h1{position: absolute; bottom:20px; right:20px; font-style:italic; color:#444; float:right; width:50%; font-size:40px; text-align:right; line-height:100%;}
+#banner1{background-image: url("banner1.JPG");}
+#banner2{background-image: url("banner2.JPG");}
+#banner3{background-image: url("banner3.JPG");}
+
+/*The Search form*/
+#searchbox
+{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 160px;
+    background-color: #eaf8fc;
+    background-image: linear-gradient(#fff, #d4e8ec);
+    border-radius: 35px;    
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c4d9df #a4c3ca #83afb7;            
+    width: 500px;
+    height: 35px;
+    padding: 10px;
+    overflow: hidden; /* Clear floats */
+}
+
+#search,#submit {
+	float: left;
+}
+
+#search {
+    padding: 5px 9px;
+    height: 23px;
+    width: 380px;
+    border: 1px solid #a4c3ca;
+    font: normal 13px 'trebuchet MS', arial, helvetica;
+    background: #f1f1f1;
+    border-radius: 50px 3px 3px 50px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 1);            
+}
+
+#submit
+{       
+    background-color: #6cbb6b;
+    background-image: linear-gradient(#95d788, #6cbb6b);
+    border-radius: 3px 50px 50px 3px;    
+    border-width: 1px;
+    border-style: solid;
+    border-color: #7eba7c #578e57 #447d43;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 
+                0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    height: 35px;
+    margin: 0 0 0 10px;
+    padding: 0;
+    width: 90px;
+    cursor: pointer;
+    font: bold 14px Arial, Helvetica;
+    color: #23441e;    
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+
+#submit:hover {       
+    background-color: #95d788;
+    background-image: linear-gradient(#6cbb6b, #95d788);
+}   
+
+#submit:active {       
+    background: #95d788;
+    outline: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;        
+}
+
+#submit::-moz-focus-inner {
+       border: 0;  /* Small centering fix for Firefox */
+}
+
+.results{
+	margin-top:10px;
+	margin-bottom:50px;
+	margin-left:70px;
+	margin-right:70px;
+	text-align:justify;
+}
+
+.questionnaire{
+	margin-top:30px;
+	margin-left:70px;
+	margin-right:70px;
+	margin-top:50px;
+}
+.questionnaire2{
+	margin-top:30px;
+	margin-left:170px;
+	margin-right:70px;
+}
+
+input[type="checkbox"] {
+    display:none;
+    	margin-left:70px;
+    
+}
+input[type="checkbox"] + label span {
+	margin-left:70px;
+	display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background: url("radio.jpg") left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+    background: url("radio.jpg") -19px top no-repeat;
+    /*#banner3{background-image: url("banner3.JPG");}*/
+    
+}
+
+h3 {
+	color:white;
+	padding-left:10px;
+	border-radius: 10px;
+	font-family: Impact, Charcoal, sans-serif;
+	background-color:black;
+}
+
+#inputsQuestion {
+	 border-radius:7px;
+ /* mozilla */
+ -moz-border-radius:5px;
+ /* webkit */
+ -webkit-border-radius:5px;
+ color:#00f;
+background-color:#ddd;
+border-width:2px
+}
